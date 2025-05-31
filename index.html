@@ -2,49 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>The Calm You | Personalized Tarot Readings & Spell Work</title>
 
-  <!-- Meta Description (shows on Google) -->
   <meta name="description" content="The Calm You offers personalized tarot readings, spell work, and manifestation guidance tailored to your energy — in English, Hindi & Hinglish. Book now.">
-
-  <!-- Keywords (help Google understand your content) -->
   <meta name="keywords" content="tarot reading, tarot India, personalized guidance, spiritual, spell work, The Calm You, manifestation, Hindi tarot, Hinglish reading">
 
-  <!-- Open Graph Meta (for social sharing previews) -->
   <meta property="og:title" content="The Calm You - Tarot Readings & Spell Work">
   <meta property="og:description" content="Personalized tarot readings, spells & guidance in English, Hindi & Hinglish.">
   <meta property="og:url" content="https://thecalmyou.github.io/thecalmyou/">
   <meta property="og:type" content="website">
 
-  <!-- Favicon (optional) -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<section id="reviews">
-  <div class="review-container">
-    <h2>Share Your Experience</h2>
-
-    <form id="review-form">
-      <input type="text" id="name" name="name" placeholder="Your Name" required />
-      <select id="rating" name="rating" required>
-        <option value="">Rating</option>
-        <option value="5">★★★★★</option>
-        <option value="4">★★★★</option>
-        <option value="3">★★★</option>
-        <option value="2">★★</option>
-        <option value="1">★</option>
-      </select>
-      <textarea id="comment" name="comment" placeholder="Your honest review..." required></textarea>
-      <button type="submit">Submit Review</button>
-    </form>
-
-    <div id="review-list"></div>
-  </div>
-</section>
 
 <body>
   <header>
@@ -63,31 +36,31 @@
     <div class="reading">
       <h3>Yes or No Question – ₹200 (10 min)</h3>
       <p>Ask any one question and get a clear yes/no answer with intuitive guidance.</p>
-      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank">Buy Now</a>
+      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank" class="btn">Buy Now</a>
     </div>
 
     <div class="reading">
       <h3>1 Tarot Reading Question – ₹300 (10 min)</h3>
       <p>Ask one detailed question and receive channeled guidance from the tarot.</p>
-      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank">Buy Now</a>
+      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank" class="btn">Buy Now</a>
     </div>
 
     <div class="reading">
       <h3>1 Question + Guidance + Spell – ₹400 (15 min)</h3>
       <p>Get your answer with spellwork for energetic healing & resolution.</p>
-      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank">Buy Now</a>
+      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank" class="btn">Buy Now</a>
     </div>
 
     <div class="reading">
       <h3>1 Question + Spell + Manifestation – ₹500 (20 min)</h3>
       <p>A full package: answer, spell, and personal manifestation techniques curated for you.</p>
-      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank">Buy Now</a>
+      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank" class="btn">Buy Now</a>
     </div>
 
     <div class="reading">
       <h3>30-Min Live Tarot – ₹1000</h3>
       <p>Unlimited questions, guidance, spellwork, and manifesting rituals in a 30-minute session.</p>
-      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank">Buy Now</a>
+      <a href="https://forms.gle/4jHMdCj793LsNokAA" target="_blank" class="btn">Buy Now</a>
     </div>
   </section>
 
@@ -120,14 +93,37 @@
     </div>
   </section>
 
+  <section id="reviews">
+    <div class="review-container">
+      <h2>Share Your Experience</h2>
+
+      <form id="review-form">
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <select id="rating" name="rating" required>
+          <option value="" disabled selected>Rating</option>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★</option>
+          <option value="3">★★★</option>
+          <option value="2">★★</option>
+          <option value="1">★</option>
+        </select>
+        <textarea id="comment" name="comment" placeholder="Your honest review..." required></textarea>
+        <button type="submit" class="btn">Submit Review</button>
+      </form>
+
+      <div id="review-list"></div>
+    </div>
+  </section>
+
   <section class="contact">
     <p><strong>Want to know more?</strong> <a href="tel:+919878226859">Chat now with us: +91 98782 26859</a></p>
     <p>Follow us on: 
-      <a href="https://instagram.com/thecalmyou1111" target="_blank">Instagram</a> | 
-      <a href="https://youtube.com/@thecalmyou1111" target="_blank">YouTube</a> | 
+      <a href="https://instagram.com/thecalmyou1111" target="_blank" rel="noopener">Instagram</a> | 
+      <a href="https://youtube.com/@thecalmyou1111" target="_blank" rel="noopener">YouTube</a> | 
       <a href="mailto:thecalmyou1111@gmail.com">Email</a>
     </p>
   </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
