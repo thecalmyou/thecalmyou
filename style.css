@@ -99,16 +99,12 @@ h2 {
   text-decoration: underline;
 }
 
-/* Updated review section styles */
-
+/* === Review Section Styling === */
 #reviews {
   padding: 3rem 1rem;
-  background-color: #3a2417; /* Dark warm brown */
-  color: #ffc68f;            /* Light warm cream */
-  border-radius: 10px;
-  max-width: 900px;
-  margin: 2rem auto;
-  box-shadow: 0 0 10px rgba(163, 124, 86, 0.5);
+  background-color: #fefcfb; /* Creamy off-white background */
+  color: #3b2517; /* Dark brown text */
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .review-container {
@@ -118,7 +114,7 @@ h2 {
 
 .review-container h2 {
   text-align: center;
-  color: #ffd9a0;
+  color: #5b3e38; /* Deep warm brown */
   margin-bottom: 2rem;
 }
 
@@ -133,37 +129,39 @@ h2 {
 #review-form textarea {
   padding: 0.8rem;
   border-radius: 0.5rem;
-  border: 1px solid #a37c56;
+  border: 1px solid #d7ccc8; /* soft beige border */
   font-family: inherit;
-  background-color: #2b1a11;
-  color: #fbe8d3;
+  font-size: 1rem;
+  color: #3b2517;
+  background-color: #fff8f0; /* very light cream */
+  transition: border-color 0.3s ease;
 }
 
-#review-form input::placeholder,
-#review-form textarea::placeholder {
-  color: #d3b891;
-}
-
-#review-form select {
-  appearance: none;
-  background-color: #2b1a11;
-  color: #fbe8d3;
-  cursor: pointer;
+#review-form input:focus,
+#review-form select:focus,
+#review-form textarea:focus {
+  outline: none;
+  border-color: #fbd4a6; /* creamy warm highlight */
 }
 
 #review-form button {
-  background-color: #8c5f39;
-  color: #fff;
-  padding: 0.8rem;
+  background-color: #ffd9a0; /* creamy warm */
+  color: #3b2517; /* dark brown text */
+  padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(255, 217, 160, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 #review-form button:hover {
-  background-color: #a3714e;
+  background-color: #fbd4a6; /* slightly darker creamy */
+  color: #2b1a11; /* darker brown */
+  box-shadow: 0 6px 8px rgba(251, 212, 166, 0.7);
 }
 
 #review-list {
@@ -171,25 +169,21 @@ h2 {
 }
 
 .review-item {
-  background-color: #2b1a11;
-  border: 1px solid #a37c56;
-  padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
-  border-radius: 8px;
+  border-bottom: 1px solid #e0deda;
+  padding-bottom: 1rem;
 }
 
 .review-item h4 {
   margin: 0 0 0.5rem 0;
-  color: #ffd9a0;
+  color: #5b3e38;
 }
 
 .review-item .stars {
-  color: #fbd4a6;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  color: #ffc107; /* gold star color */
+  font-size: 1.2rem;
 }
 
 .review-item p {
-  margin: 0;
-  color: #fbe8d3;
+  margin-top: 0.5rem;
 }
