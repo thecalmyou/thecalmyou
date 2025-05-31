@@ -1,56 +1,51 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const questions = document.querySelectorAll(".faq-question");
-  
-    questions.forEach((q) => {
-      q.addEventListener("click", () => {
-        const answer = q.nextElementSibling;
-  
-        document.querySelectorAll(".faq-answer").forEach((a) => {
-          if (a !== answer) a.style.display = "none";
-        });
-  
-        answer.style.display = answer.style.display === "block" ? "none" : "block";
-      });
-    });
-  });
-<script>
-  const reviewForm = document.getElementById('review-form');
-  const reviewList = document.getElementById('review-list');
+// FAQ Toggle
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const answer = btn.nextElementSibling;
+    const isVisible = answer.style.display === 'block';
 
-  function loadReviews() {
-    const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
-    reviewList.innerHTML = '';
-    reviews.forEach(data => {
-      const reviewDiv = document.createElement('div');
-      reviewDiv.className = 'review-item';
-      reviewDiv.innerHTML = `
-        <h4>${data.name}</h4>
-        <div class="stars">${'★'.repeat(data.rating)}${'☆'.repeat(5 - data.rating)}</div>
-        <p>${data.comment}</p>
-      `;
-      reviewList.appendChild(reviewDiv);
-    });
+    // Hide all answers first
+    document.querySelectorAll('.faq-answer').forEach(a => (a.style.display = 'none'));
+
+    // Toggle current
+    answer.style.display = isVisible ? 'none' : 'block';
+  });
+});
+
+// Review form submission and rendering reviews locally (no backend)
+const form = document.getElementById('review-form');
+const reviewList = document.getElementById('review-list');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  const name = form.name.value.trim();
+  const rating = form.rating.value;
+  const comment = form.comment.value.trim();
+
+  if (!name || !rating || !comment) {
+    alert('Please fill all fields.');
+    return;
   }
 
-  reviewForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const comment = document.getElementById('comment').value.trim();
-    const rating = parseInt(document.getElementById('rating').value);
+  // Create review element
+  const reviewEl = document.createElement('div');
+  reviewEl.classList.add('review');
 
-    if (name && comment && rating) {
-      const newReview = { name, comment, rating };
-      const reviews = JSON.parse(localStorage.getItem('reviews') || '[]');
-      reviews.unshift(newReview);
-      localStorage.setItem('reviews', JSON.stringify(reviews));
-      reviewForm.reset();
-      loadReviews();
-    } else {
-      alert('Please fill all fields.');
-    }
-  });
+  // Stars for rating
+  const stars = '★★★★★☆☆☆☆☆'.slice(5 - rating, 10 - rating);
 
-  document.addEventListener('DOMContentLoaded', loadReviews);
-</script>
+  reviewEl.innerHTML = `
+    <div class="review-header">${name}</div>
+    <div class="review-rating">${stars}</div>
+    <div class="review-comment">${comment}</div>
+  `;
+
+  reviewList.prepend(reviewEl);
+
+  // Reset form
+  form.reset();
+});
+
 
   
